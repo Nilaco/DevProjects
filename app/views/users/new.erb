@@ -1,0 +1,15 @@
+<h1>Register</h1>
+
+<% if @user%>
+  <% @user.errors.full_messages.each do |error| %>
+  <%= error %><br>
+  <% end %>
+<% end %>
+
+
+  <form method='post' action='/users'>
+    <input type='text' name='email' placeholder='user email'><br>
+    <input type='password' name='password' placeholder='user password'><br>
+
+    <input type="submit" value="Register" />
+  </form>

@@ -1,0 +1,27 @@
+<div class = "page-container">
+
+<div id="last-searches">
+  <h3> Last 3 Global Searches: </h3>
+  <ul>
+    <% if Search.all[-3] %>
+      <li><%=Search.all[-1].address%></li>
+      <li><%=Search.all[-2].address%></li>
+      <li><%=Search.all[-3].address%></li>
+    <% end %>
+  </ul>
+</div>
+
+<div id="map-canvas">
+
+</div>
+
+
+<!-- <div class="location-button-container">
+  <button id="my-location" type="submit" value="Set"
+    <h5>Current Location</h5> >
+  </button>
+</div> -->
+
+<div class='.search'><%= erb :'_search' %><div>
+
+</div>

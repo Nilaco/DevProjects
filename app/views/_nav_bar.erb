@@ -1,0 +1,26 @@
+<div class="navbar">
+  <div class="container">
+      <!-- <div class = 'title'><h3>TEXT</h3></div> -->
+      <div class="title"><h2> Shit Happens </h2></div>
+    <div id="home-button" <%= logged_in? ? '' : 'style="display: none;"'%>>
+      <div class="navbar-brand navbar-left"><a href="/">Home</a></div>
+    </div>
+
+    <div id="profile-button" <%= logged_in? ? '' : 'style="display: none;"'%>>
+      <div class="navbar-brand navbar-left"><a href="/users/1">Profile</a></div>
+    </div>
+
+    <div id="login-form" <%= logged_in? ? 'style="display: none;"' : ''%>>
+      <%= erb :"users/_login" %>
+    </div>
+
+    <div id="register-form" <%= logged_in? ? 'style="display: none;"' : ''%>>
+      <a href="/users/new">Register</a>
+    </div>
+
+    <div id="logout-button" <%= logged_in? ? '' : 'style="display: none;"'%>>
+      <div class="navbar-brand navbar-right"><%= erb :'users/_logout' %></div>
+    </div>
+
+  </div>
+</div>

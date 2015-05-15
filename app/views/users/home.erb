@@ -1,0 +1,25 @@
+<div class='page-container'>
+
+  <% if logged_in? %>
+    <h1>Logged in with : <%= current_user.email %> </h1>
+
+    <h5>Your searches: </h5>
+      <% current_user.searches.all.each do |search| %>
+      <div class="searches">
+        <div class="searches-box">
+        <p>Address: <%= search.address %></p><br>
+        <p>Income: <%= search.income %></p><br>
+        <p>Crime Rate:</p>
+        </div>
+
+      <div class='mini-map'>
+        <img src='http://thumbs.dreamstime.com/x/treasure-map-21081577.jpg' height = "100px" width = "100px">
+      </div>
+
+      </div>
+      <br>
+      <% end %>
+
+  <% end %>
+
+</div>
